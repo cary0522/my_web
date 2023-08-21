@@ -1,24 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 @keyframes color {
-    0% {background:antiquewhite;}
-    50%{background:#FFDCB9;}
-    100%{background:#FFD1A4;}
+    0% {
+        background: antiquewhite;
+    }
+
+    50% {
+        background: #FFDCB9;
+    }
+
+    100% {
+        background: #FFD1A4;
+    }
 }
 
-html{
+html {
     height: 100%;
 }
-body{
+
+body {
     height: 100%;
     background-color: antiquewhite;
     animation: color 10s infinite linear alternate;
 }
 
-.all_nav{
+.all_nav {
     background-color: #FFC78E;
     border-radius: 5px;
     height: 45px;
@@ -28,25 +37,29 @@ body{
     justify-content: center;
 }
 
-.nav{
+.nav {
     margin-top: 10px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-nav div a{
+.nav h3{
+    font-family: "Barriecito";
+}
+
+nav div a {
     color: #D26900;
     text-decoration: none;
 }
 
-nav div a:hover{
+nav div a:hover {
     color: #A23400;
     font-size: 25px;
     opacity: 80%;
     transition-duration: .5s;
 }
 
-.circle{
+.circle {
     width: 100%;
     height: 100%;
     top: 0;
@@ -56,49 +69,49 @@ nav div a:hover{
     z-index: -1;
 }
 
-.circle li{
+.circle li {
     position: fixed;
     display: block;
     width: 20px;
     height: 20px;
     bottom: -150px;
     border-radius: 50%;
-    background: rgba(255,255,255, .6);
+    background: rgba(255, 255, 255, .6);
     opacity: .7;
-    animation:circle 10s infinite;
+    animation: circle 10s infinite;
     z-index: -1;
 }
 
-.circle li:nth-child(1){
-    left : 50%;
+.circle li:nth-child(1) {
+    left: 50%;
     width: 60px;
     height: 60px;
     animation-delay: 2s;
     animation-duration: 15s;
 }
 
-.circle li:nth-child(2){
-    left : 80%;
+.circle li:nth-child(2) {
+    left: 80%;
     width: 90px;
     height: 90px;
 }
 
-.circle li:nth-child(3){
-    left : 25%;
+.circle li:nth-child(3) {
+    left: 25%;
     width: 20px;
     height: 20px;
     animation-delay: 1s;
     animation-duration: 20s;
 }
 
-.circle li:nth-child(4){
+.circle li:nth-child(4) {
     left: 10%;
     width: 40px;
     height: 40px;
-    animation-delay:-2s;
+    animation-delay: -2s;
 }
 
-.circle li:nth-child(5){
+.circle li:nth-child(5) {
     left: 45%;
     width: 50px;
     height: 50px;
@@ -106,7 +119,7 @@ nav div a:hover{
     animation-duration: 18s;
 }
 
-.circle li:nth-child(6){
+.circle li:nth-child(6) {
     left: 75%;
     width: 90px;
     height: 90px;
@@ -114,13 +127,16 @@ nav div a:hover{
 }
 
 @keyframes circle {
-    0%{transform : translateY(0) rotate(0deg);
+    0% {
+        transform: translateY(0) rotate(0deg);
     }
-    100%{transform : translateY(-1000px) rotate(360deg);   
+
+    100% {
+        transform: translateY(-1000px) rotate(360deg);
     }
 }
 
-.main{
+.main {
     width: 98%;
     height: 400px;
     border: 1px black dotted;
@@ -129,40 +145,65 @@ nav div a:hover{
     padding: 5px;
 }
 
-.photo{
+.photo {
     display: flex;
+    justify-content: center;
     margin: 5px;
 }
 
-.photo img{
-    width: 33%;
+@media (max-width:800px) {
+    .photo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .photoImg{
+        width: 90%;
+    }
+}
+
+@media (max-width:500px){
+    .photoImg{
+        width: 90%;
+    }
+}
+
+.photoImg {
+    width: 290px;
     height: 300px;
     object-fit: none;
-} 
+}
 
-img{
+img {
     border: 1px black solid;
     border-radius: 5px;
     margin: 1px;
 }
 
-.welcome{
+.welcome {
     margin: 10px;
 }
 
-.welcome h4{
-    text-align: center;
+br{
+    display: none;
 }
 
-.about_me , .learning , .action , .feedback{
+.welcome h4 {
+    text-align: center;
+    font-family: "Barriecito";
+}
+
+.about_me,
+.learning,
+.action,
+.feedback {
     margin: 5px;
 }
 
-.about_me h4{
+.about_me h4 {
     margin-left: 15px;
 }
 
-.about_me_flex{
+.about_me_flex {
     display: flex;
     padding: 10px;
     margin: 5px;
@@ -180,71 +221,72 @@ img{
     margin: 5px;
 }
 
-.about_me_text{
+.about_me_text {
     padding-left: 20px;
-    padding-top:90px;
+    padding-top: 90px;
     padding-bottom: 0px;
 }
 
 
-.ul_two{
+.ul_two {
     margin-left: 10px;
 }
 
-.about_me_img img{
+.about_me_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.learning h4{
+.learning h4 {
     margin-left: 15px;
 }
 
-.learning{
+.learning {
     padding: 10px;
 }
 
-.learning h5 , h6 {
+.learning h5,
+h6 {
     margin: 5px;
 }
 
-.learning_flex{
+.learning_flex {
     display: flex;
 }
 
-.learn_text{
+.learn_text {
     padding-left: 15px;
     padding-top: 150px;
     width: 50%;
     height: 250px;
     margin: 5px;
-} 
+}
 
-.learn_img{
+.learn_img {
     width: 50%;
     height: 400px;
     margin: 5px;
 }
 
-.learn_img img{
+.learn_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.action h4{
+.action h4 {
     margin-left: 15px;
 }
 
-.action_flex{
+.action_flex {
     width: 100%;
     height: 500px;
     padding: 5px;
     display: flex;
 }
 
-.recoding{
+.recoding {
     width: 24.5%;
     height: auto;
     margin: 5px;
@@ -252,25 +294,25 @@ img{
 
 }
 
-.recoding_flex{
+.recoding_flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.act_img{
+.act_img {
     margin: 15px;
     width: 200px;
     height: 150px;
 }
 
-.act_img img{
+.act_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.form{
+.form {
     width: 100%;
     margin: 10px;
     display: flex;
@@ -278,26 +320,27 @@ img{
     justify-content: center;
 }
 
-.form_form{
+.form_form {
     opacity: .9;
 }
 
-.feadback{
+.feadback {
     position: relative;
 }
 
-.feedback h4{
+.feedback h4 {
     margin-left: 15px;
 }
 
-#feedback_text{
+#feedback_text {
     display: block;
 }
-.square{
+
+.square {
     position: relative;
 }
 
-.cube{
+.cube {
     width: 20px;
     height: 20px;
     border: black solid 2px;
@@ -308,7 +351,7 @@ img{
     z-index: -1;
 }
 
-.square div:nth-child(1){
+.square div:nth-child(1) {
     width: 40px;
     height: 40px;
     border: #9F5000 solid 5px;
@@ -317,14 +360,14 @@ img{
     animation-delay: -1s;
 }
 
-.square div:nth-child(2){
+.square div:nth-child(2) {
     width: 30px;
     height: 30px;
     left: 23%;
-    border:	#BB3D00 solid 3px;
+    border: #BB3D00 solid 3px;
 }
 
-.square div:nth-child(3){
+.square div:nth-child(3) {
     width: 60px;
     height: 60px;
     left: 80%;
@@ -333,11 +376,12 @@ img{
     animation-duration: 3s;
 }
 
-@keyframes big{
-    0%{
-        transform:scale(0) rotate(0deg);
+@keyframes big {
+    0% {
+        transform: scale(0) rotate(0deg);
     }
-    100%{
-        transform:scale(3) rotate(360deg);
+
+    100% {
+        transform: scale(3) rotate(360deg);
     }
 }
